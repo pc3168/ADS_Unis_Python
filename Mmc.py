@@ -30,6 +30,7 @@ def reiniciar():
     end.delete(0, END)
     alt.delete(0, END)
     pe.delete(0, END)
+    resultado.delete("1.0", "end")
 
 
 def sair():
