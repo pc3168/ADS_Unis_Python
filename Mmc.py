@@ -40,6 +40,7 @@ def reiniciar():
     end.delete(0, END)
     alt.delete(0, END)
     pe.delete(0, END)
+    info.delete(0, END)
     resultado.delete("1.0", "end")
 
 def gravar():
@@ -48,6 +49,7 @@ def gravar():
     BancoDadosPython.criarTabela(conn,sql)
     alturacm = calculaAltura()
     BancoDadosPython.inserirDados(conn,np.get(),end.get(),str(alturacm),pe.get(),calcula(calculaImc()))
+    info.insert(INSERT, "Gravado no BD")
 
 
 def sair():
@@ -63,16 +65,19 @@ Label(app, text="Nome:", anchor=W).place(x=10,y=10,width=100,height=20)
 Label(app, text="Endereço:", anchor=W).place(x=10,y=35,width=100,height=20)
 Label(app, text="Altura cm:", anchor=W).place(x=10,y=60,width=100,height=20)
 Label(app, text="Peso:", anchor=W).place(x=10,y=85,width=100,height=20)
+Label(app, text="info:", anchor=W).place(x=10,y=110,width=100,height=20)
 
 np=Entry(app)
 end=Entry(app)
 alt=Entry(app)
 pe=Entry(app)
+info=Entry(app)
 
 np.place (x=110,y=10,width=350,height=20)
 end.place(x=110,y=35,width=350,height=20)
 alt.place(x=110,y=60,width=100,height=20)
 pe.place (x=110,y=85,width=100,height=20)
+info.place (x=110,y=110,width=100,height=20)
 
 resultado=Text(app)
 resultado.place (x=220,y=60,width=240,height=110)

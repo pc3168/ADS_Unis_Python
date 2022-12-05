@@ -5,7 +5,7 @@ from numpy.distutils.command.config import config
 
 
 def conexaoBD():
-    nome_banco = "C:\\teste\\mmc.db"
+    nome_banco = "mmc.db"
     print(f'Criando BD Sqlite, {nome_banco}')
     conn = None
     try:
@@ -49,9 +49,9 @@ def fecharConexao(conn):
 
 
 
-if __name__ == '__main__':
-    dbName = "C:\\teste\\mmc.db"
-    conn = conexaoBD()
+#if __name__ == '__main__':
+    #dbName = "C:\\teste\\mmc.db"
+    #conn = conexaoBD()
     #criarTabela(conn, vsql)
     #fecharConexao(conn)
-    inserirDados(conn, "nome", "endereco","altura","peso","info")
+    #inserirDados(conn, "nome", "endereco","altura","peso","info")
